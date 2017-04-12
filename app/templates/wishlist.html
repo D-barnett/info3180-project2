@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+<div ng-app="Appliancewishlist" ng-controller="MainController">
+    <h2> Appliances and Electronics</h2>
+    <div>
+        <img ng-repeat="product in products">
+            <div><img ng-src="{{ product}}" /></div>
+    </div>
+</div> 
+
+<script src="static/js/app.js"></script>
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static',filename='js/angular.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/app.js') }}"></script>
+{% endblock %}
